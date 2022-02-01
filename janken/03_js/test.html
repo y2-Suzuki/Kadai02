@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- リセットCSS読み込み -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- style.css読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery読み込み -->
+
+    <title>js練習用</title>
+</head>
+<body>
+    <div>
+        <h1>Javascript練習</h1>
+        <video src="images/04.mp4" controls muted autoplay playinline loop></video>
+        <button id="btn">ボタン</button>
+    </div>
+
+    <!-- ここからjsを書き始めます -->
+    <script>
+        document.querySelector("#btn").onclick=function(){
+            document.querySelector("video").playbackRate= 8;
+             console.log("OK");
+        };
+
+    </script>
+    
+</body>
+</html>
+
+
+<script>
+var tm = setInterval("sample()", 1000);
+
+
+</script>

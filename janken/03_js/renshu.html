@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- リセットCSS読み込み -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- style.css読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <title>jquery練習用</title>
+</head>
+<body>
+    <h1>jquery練習</h1>
+    <!-- ①HTMLを書き換える -->
+    <p id="text" class="text"></p>
+
+    <!-- ②アニメーション -->
+    <p><img id="img" width="600px" src="images/01.jpg" alt=""></p>
+
+    <!-- ③データ取得 -->
+    <p id="message" class="message">ここにメッセージを記述します。</p>
+
+    <!-- ④イベント（クリック） -->
+    <input id="data" type="text">
+    <button id="btn">ボタン</button>
+    
+
+
+
+    <!-- ここからjavascript -->
+    <!-- <script>
+        // 変数
+        let name = "鈴木";
+        let age = 27;
+        let last_name = "のりこ"
+        let tax ="0.1";
+
+        console.log(name);
+        console.log(age + 5);
+        console.log(name + last_name);
+        console.log(100 * tax);
+
+        <!- // // 条件分岐 -->
+        <!-- // let num =3;
+        
+        // // if(num>=1 ){
+        // //     alert("1以上です！");
+        // // }eles{
+        // //     alert("1以下です！");
+        // // }
+
+        // if(num==1){
+        //      alert("1です！");
+        // }else if(num > 2 || num > 5 ){
+        //      alert("2より大きいです！");
+        // }else {
+        //     alert("1と３以外の数字です");
+        // } --> 
+
+        
+
+    <!-- </script> -->
+
+ <script>
+//フェードアウト
+$('#img').fadeOut(3000); 
+//フェードイン
+$('#img').fadeIn(3000); 
+ </script>
+
+ 
+</body>
+</html>
+
+<img id="pic" src="hoge.jpg" width="200" height="200">
+
+/* javascript */
+
+'use strict';
+
+const img = ["hoge.jpg", "foo.jpg", "bar.jpg"];
+
+let count = -1;
+
+picChange();
+
+function picChange() {
+
+  count++;
+  // カウントが最大になれば初期値に戻す
+  if (count == img.length) count = 0;
+  //画像選択
+  pic.src = img[count];
+  //1秒ごとに実行
+  setTimeout("picChange()", 1000);
+}
+
